@@ -21,7 +21,7 @@
         // ดึงข้อมูลรายงานจาก session storage
         const reportData = JSON.parse(sessionStorage.getItem("reportData"));
 
-        // แสดงข้อมูลในตาราง
+         // แสดงข้อมูลในตาราง
         const reportTable = document.getElementById("report-table").querySelector("tbody");
         for (const type in reportData) {
             for (const status in reportData[type]) {

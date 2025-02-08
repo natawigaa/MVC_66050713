@@ -1,6 +1,7 @@
 
 // Model 
 const drivers = [
+    
     // Drivers data
     {"licenseId": "123456789", "type": "บุคคลทั่วไป", "birthdate": "01/01/1980", "status": "ปกติ"},
     {"licenseId": "987654321", "type": "มือใหม่", "birthdate": "15/05/1995", "status": "ปกติ"},
