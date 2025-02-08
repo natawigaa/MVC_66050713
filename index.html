@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ระบบตรวจสอบใบขับขี่</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>ระบบตรวจสอบใบขับขี่</h1>
+    <form id="licenseForm" action="">
+        <label for="licenseId">หมายเลขใบขับขี่:</label>
+        <input type="text" id="licenseId" name="licenseId" maxlength="9" required>
+        <button type="submit">ตรวจสอบ</button>
+    </form>
+    <div id="error-message"></div>
+
+    <button id="reportButton">ดูรายงาน</button> 
+
+    <script src="script.js"></script>
+    <script>
+        // ... (ส่วนอื่น ๆ ของโค้ด)
+
+        const reportButton = document.getElementById("reportButton");
+        reportButton.addEventListener("click", generateReport); 
+    </script>
+</body>
+</html>

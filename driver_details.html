@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>รายละเอียดผู้ขับขี่</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>รายละเอียดผู้ขับขี่</h1>
+    <div id="driver-details">
+        <p><strong>หมายเลขใบขับขี่:</strong> <span id="driver-licenseId"></span></p>
+        <p><strong>ประเภทผู้ขับขี่:</strong> <span id="driver-type"></span></p>
+        <p><strong>วันเกิด:</strong> <span id="driver-birthdate"></span></p>
+        <p><strong>สถานะใบขับขี่:</strong> <span id="driver-status"></span></p>
+        <div id="driver-actions"></div>
+    </div>
+
+    
+
+    <script src="script.js"></script>
+    <script>
+        const driver = JSON.parse(sessionStorage.getItem("driver"));
+
+        document.getElementById("driver-licenseId").textContent = driver.licenseId;
+        document.getElementById("driver-type").textContent = driver.type;
+        document.getElementById("driver-birthdate").textContent = driver.birthdate;
+        document.getElementById("driver-status").textContent = driver.status;
+
+        handleDriverView(driver);
+    </script>
+</body>
+</html>

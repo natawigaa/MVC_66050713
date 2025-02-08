@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>รายงานจำนวนผู้ขับขี่</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>รายงานจำนวนผู้ขับขี่</h1>
+    <table id="report-table">
+        <thead>
+            <tr>
+                <th>ประเภทผู้ขับขี่</th>
+                <th>สถานะ</th>
+                <th>จำนวน</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script>
+        // ดึงข้อมูลรายงานจาก session storage
+        const reportData = JSON.parse(sessionStorage.getItem("reportData"));
+
+        // แสดงข้อมูลในตาราง
+        const reportTable = document.getElementById("report-table").querySelector("tbody");
+        for (const type in reportData) {
+            for (const status in reportData[type]) {
+                const row = reportTable.insertRow();
+                const typeCell = row.insertCell();
+                const statusCell = row.insertCell();
+                const countCell = row.insertCell();
+
+                typeCell.textContent = type;
+                statusCell.textContent = status;
+                countCell.textContent = reportData[type][status];
+            }
+        }
+    </script>
+</body>
+</html>
